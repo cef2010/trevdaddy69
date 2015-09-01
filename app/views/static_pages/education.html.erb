@@ -6,3 +6,16 @@
 <nav>
   <%= render "layouts/navbar" %>
 </nav>
+
+<div class='content'>
+  <ul>
+    <% @educations.each do |education| %>
+    <li>
+      <h4><%= education.school %></h4><br>
+      <h5><%= education.degree %></h5><br>
+      <p><%= education.city %>, <%= education.state %></p><br>
+      <p><%= education.years_attended %></p>
+    </li>
+    <% end %>
+  </ul>
+</div>

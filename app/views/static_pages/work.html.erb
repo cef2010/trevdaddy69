@@ -6,3 +6,15 @@
 <nav>
   <%= render "layouts/navbar" %>
 </nav>
+
+<div class='content'>
+  <ul>
+    <% @works.each do |job| %>
+    <li>
+      <h4><%= job.employer %></h4><br>
+      <p><%= job.city %>, <%= job.state %></p><br>
+      <p><%= job.years_worked %></p>
+    </li>
+    <% end %>
+  </ul>
+</div>
